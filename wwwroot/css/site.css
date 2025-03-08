@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    height: 100vh; /* Makes the background cover the full viewport height */
+    margin: 0; /* Removes default body margin */
+    background: linear-gradient(to bottom, #dfe6e9, #74b9ff);
+    background-size: cover; /* Ensures it fully covers the screen */
+}
+
+
+/* Header Styling */
+.text-title {
+    color: #2c3e50; /* Dark blue-gray */
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Centering Content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tic-Tac-Toe Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background-color: #ecf0f1; /* Light gray */
+    border: 2px solid #bdc3c7; /* Subtle border */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+    .cell:hover {
+        background-color: #d5dbdb;
+        transform: scale(1.05);
+    }
+
+    .cell.x {
+        color: #2980b9; /* Deep blue */
+        font-weight: bold;
+    }
+
+    .cell.o {
+        color: #c0392b; /* Deep red */
+        font-weight: bold;
+    }
+
+/* Winning Cells */
+.winning-cell {
+    background-color: #f39c12; /* Warm gold */
+    color: white !important;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.8);
+}
+
+/* Buttons */
+.btn {
+    width: 160px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background-color: #f1c40f;
+    border: none;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #d4ac0d;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Ensure Restart Button is Centered */
+#restartGame {
+    display: block;
+    margin: 0 auto;
+}
+
